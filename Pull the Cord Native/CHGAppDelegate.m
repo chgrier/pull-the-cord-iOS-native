@@ -1,22 +1,28 @@
 //
-//  AppDelegate.m
+//  CHGAppDelegate.m
 //  Pull the Cord Native
 //
 //  Created by Charles Grier on 1/27/15.
 //  Copyright (c) 2015 Grier Mobile Development. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "CHGAppDelegate.h"
+#import "CHGMainViewController.h"
 
-@interface AppDelegate ()
+@interface CHGAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation CHGAppDelegate
+
+
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    
     return YES;
 }
 
@@ -28,6 +34,12 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    if ([CLLocationManager significantLocationChangeMonitoringAvailable]) {
+        // stop normal location updates and start significant location change updates for battery efficiency
+        [self.viewController.locationManager stopUpdatingLocation];
+        [self.viewController.locationManager startMonitoringSignificantLocationChanges];
+    }
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {

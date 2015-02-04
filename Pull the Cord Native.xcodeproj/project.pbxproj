@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		BE4A5A221A77E3C7008B4DD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4A5A211A77E3C7008B4DD2 /* main.m */; };
-		BE4A5A251A77E3C7008B4DD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4A5A241A77E3C7008B4DD2 /* AppDelegate.m */; };
-		BE4A5A281A77E3C7008B4DD2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4A5A271A77E3C7008B4DD2 /* ViewController.m */; };
+		BE4A5A251A77E3C7008B4DD2 /* CHGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4A5A241A77E3C7008B4DD2 /* CHGAppDelegate.m */; };
+		BE4A5A281A77E3C7008B4DD2 /* CHGMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4A5A271A77E3C7008B4DD2 /* CHGMainViewController.m */; };
 		BE4A5A2B1A77E3C7008B4DD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE4A5A291A77E3C7008B4DD2 /* Main.storyboard */; };
 		BE4A5A2D1A77E3C7008B4DD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE4A5A2C1A77E3C7008B4DD2 /* Images.xcassets */; };
 		BE4A5A301A77E3C7008B4DD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE4A5A2E1A77E3C7008B4DD2 /* LaunchScreen.xib */; };
 		BE4A5A3C1A77E3C7008B4DD2 /* Pull_the_Cord_NativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4A5A3B1A77E3C7008B4DD2 /* Pull_the_Cord_NativeTests.m */; };
+		BE4A5A461A77E420008B4DD2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4A5A451A77E420008B4DD2 /* CoreLocation.framework */; };
+		BEBE8D1E1A7A0AEB00754C2F /* trolleyLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEBE8D1D1A7A0AEB00754C2F /* trolleyLogo.jpg */; };
+		BEBE8D241A7A8D5100754C2F /* busStop.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBE8D231A7A8D5100754C2F /* busStop.png */; };
+		BEBE8D261A7C0B6C00754C2F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBE8D251A7C0B6C00754C2F /* AVFoundation.framework */; };
+		BEC31F781A781A300094DACF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC31F771A781A300094DACF /* MapKit.framework */; };
+		BEC31F7B1A7835DD0094DACF /* CHGStation.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC31F7A1A7835DD0094DACF /* CHGStation.m */; };
+		BEF47D4F1A784876009DA46B /* sdmts_blueLine.json in Resources */ = {isa = PBXBuildFile; fileRef = BEF47D4E1A784876009DA46B /* sdmts_blueLine.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,16 +37,24 @@
 		BE4A5A1C1A77E3C7008B4DD2 /* Pull the Cord Native.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pull the Cord Native.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4A5A201A77E3C7008B4DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE4A5A211A77E3C7008B4DD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BE4A5A231A77E3C7008B4DD2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BE4A5A241A77E3C7008B4DD2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BE4A5A261A77E3C7008B4DD2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BE4A5A271A77E3C7008B4DD2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BE4A5A231A77E3C7008B4DD2 /* CHGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHGAppDelegate.h; sourceTree = "<group>"; };
+		BE4A5A241A77E3C7008B4DD2 /* CHGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHGAppDelegate.m; sourceTree = "<group>"; };
+		BE4A5A261A77E3C7008B4DD2 /* CHGMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHGMainViewController.h; sourceTree = "<group>"; };
+		BE4A5A271A77E3C7008B4DD2 /* CHGMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHGMainViewController.m; sourceTree = "<group>"; };
 		BE4A5A2A1A77E3C7008B4DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE4A5A2C1A77E3C7008B4DD2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BE4A5A2F1A77E3C7008B4DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BE4A5A351A77E3C7008B4DD2 /* Pull the Cord NativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pull the Cord NativeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4A5A3A1A77E3C7008B4DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE4A5A3B1A77E3C7008B4DD2 /* Pull_the_Cord_NativeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pull_the_Cord_NativeTests.m; sourceTree = "<group>"; };
+		BE4A5A451A77E420008B4DD2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BEBE8D1D1A7A0AEB00754C2F /* trolleyLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trolleyLogo.jpg; sourceTree = "<group>"; };
+		BEBE8D231A7A8D5100754C2F /* busStop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = busStop.png; path = ../../busStop.png; sourceTree = "<group>"; };
+		BEBE8D251A7C0B6C00754C2F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BEC31F771A781A300094DACF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BEC31F791A7835DD0094DACF /* CHGStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGStation.h; sourceTree = "<group>"; };
+		BEC31F7A1A7835DD0094DACF /* CHGStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGStation.m; sourceTree = "<group>"; };
+		BEF47D4E1A784876009DA46B /* sdmts_blueLine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = sdmts_blueLine.json; path = ../sdmts_blueLine.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEBE8D261A7C0B6C00754C2F /* AVFoundation.framework in Frameworks */,
+				BEC31F781A781A300094DACF /* MapKit.framework in Frameworks */,
+				BE4A5A461A77E420008B4DD2 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,13 +99,18 @@
 		BE4A5A1E1A77E3C7008B4DD2 /* Pull the Cord Native */ = {
 			isa = PBXGroup;
 			children = (
-				BE4A5A231A77E3C7008B4DD2 /* AppDelegate.h */,
-				BE4A5A241A77E3C7008B4DD2 /* AppDelegate.m */,
-				BE4A5A261A77E3C7008B4DD2 /* ViewController.h */,
-				BE4A5A271A77E3C7008B4DD2 /* ViewController.m */,
+				BE4A5A231A77E3C7008B4DD2 /* CHGAppDelegate.h */,
+				BE4A5A241A77E3C7008B4DD2 /* CHGAppDelegate.m */,
+				BE4A5A261A77E3C7008B4DD2 /* CHGMainViewController.h */,
+				BE4A5A271A77E3C7008B4DD2 /* CHGMainViewController.m */,
+				BEC31F791A7835DD0094DACF /* CHGStation.h */,
+				BEC31F7A1A7835DD0094DACF /* CHGStation.m */,
 				BE4A5A291A77E3C7008B4DD2 /* Main.storyboard */,
+				BEBE8D231A7A8D5100754C2F /* busStop.png */,
 				BE4A5A2C1A77E3C7008B4DD2 /* Images.xcassets */,
+				BEF47D4E1A784876009DA46B /* sdmts_blueLine.json */,
 				BE4A5A2E1A77E3C7008B4DD2 /* LaunchScreen.xib */,
+				BEC5B8AD1A8140C300CCC0AE /* Frameworks */,
 				BE4A5A1F1A77E3C7008B4DD2 /* Supporting Files */,
 			);
 			path = "Pull the Cord Native";
@@ -96,6 +119,7 @@
 		BE4A5A1F1A77E3C7008B4DD2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BEBE8D1D1A7A0AEB00754C2F /* trolleyLogo.jpg */,
 				BE4A5A201A77E3C7008B4DD2 /* Info.plist */,
 				BE4A5A211A77E3C7008B4DD2 /* main.m */,
 			);
@@ -117,6 +141,17 @@
 				BE4A5A3A1A77E3C7008B4DD2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEC5B8AD1A8140C300CCC0AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEBE8D251A7C0B6C00754C2F /* AVFoundation.framework */,
+				BEC31F771A781A300094DACF /* MapKit.framework */,
+				BE4A5A451A77E420008B4DD2 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +203,11 @@
 				TargetAttributes = {
 					BE4A5A1B1A77E3C7008B4DD2 = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					BE4A5A341A77E3C7008B4DD2 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -199,8 +239,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEF47D4F1A784876009DA46B /* sdmts_blueLine.json in Resources */,
 				BE4A5A2B1A77E3C7008B4DD2 /* Main.storyboard in Resources */,
+				BEBE8D241A7A8D5100754C2F /* busStop.png in Resources */,
 				BE4A5A301A77E3C7008B4DD2 /* LaunchScreen.xib in Resources */,
+				BEBE8D1E1A7A0AEB00754C2F /* trolleyLogo.jpg in Resources */,
 				BE4A5A2D1A77E3C7008B4DD2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE4A5A281A77E3C7008B4DD2 /* ViewController.m in Sources */,
-				BE4A5A251A77E3C7008B4DD2 /* AppDelegate.m in Sources */,
+				BE4A5A281A77E3C7008B4DD2 /* CHGMainViewController.m in Sources */,
+				BE4A5A251A77E3C7008B4DD2 /* CHGAppDelegate.m in Sources */,
 				BE4A5A221A77E3C7008B4DD2 /* main.m in Sources */,
+				BEC31F7B1A7835DD0094DACF /* CHGStation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Pull the Cord Native/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -356,6 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Pull the Cord Native/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -414,6 +460,7 @@
 				BE4A5A411A77E3C7008B4DD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE4A5A421A77E3C7008B4DD2 /* Build configuration list for PBXNativeTarget "Pull the Cord NativeTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +469,7 @@
 				BE4A5A441A77E3C7008B4DD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

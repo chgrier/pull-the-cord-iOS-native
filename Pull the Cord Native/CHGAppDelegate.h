@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  CHGAppDelegate.h
 //  Pull the Cord Native
 //
 //  Created by Charles Grier on 1/27/15.
@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "CHGMainViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface CHGAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) CHGMainViewController *viewController;
 
 @end
 

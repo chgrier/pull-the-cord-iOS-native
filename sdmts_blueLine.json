@@ -1,0 +1,23 @@
+[
+{"name":"San Ysidro Transit Center", "line":"Blue Line", "latitude":32.544787, "longitude":-117.029757, "radius":700},
+{"name":"Beyer Blvd Trolley Station", "line":"Blue Line", "latitude":32.557448, "longitude":-117.047009, "radius":700},
+{"name":"Iris Avenue Trolley Station", "line":"Blue Line", "latitude":32.569312, "longitude":-117.066556, "radius":700},
+{"name":"Palm Avenue Trolley Station", "line":"Blue Line", "latitude":32.583705, "longitude":-117.084088, "radius":700},
+{"name":"Palomar Street Trolley Station", "line":"Blue Line", "latitude":32.602759, "longitude":-117.084817, "radius":700},
+{"name":"H Street Trolley Station", "line":"Blue Line", "latitude":32.629798, "longitude":-117.094001, "radius":700},
+{"name":"Bayfront/E Street Trolley Station", "line":"Blue Line", "latitude":32.638914, "longitude":-117.098991, "radius":700},
+{"name":"24th Street Trolley Station", "line":"Blue Line", "latitude":32.662079, "longitude":-117.107981, "radius":700},
+{"name":"8th Street Trolley Station", "line":"Blue Line", "latitude":32.674241, "longitude":-117.112885, "radius":700},
+{"name":"Pacific Fleet Trolley Station", "line":"Blue Line", "latitude":32.685837, "longitude":-117.124429, "radius":700},
+{"name":"Harborside Trolley Station", "line":"Blue Line", "latitude":32.691101, "longitude":-117.132508, "radius":700},
+{"name":"Barrio Logan Trolley Station", "line":"Blue Line", "latitude":32.698044, "longitude":-117.146616, "radius":700},
+{"name":"12th & Imperial Transit Center", "line":"Blue Line", "latitude":32.705971, "longitude":-117.153106, "radius":455},
+{"name":"Park & Market Trolley Station", "line":"Blue Line", "latitude":32.711514, "longitude":-117.15404, "radius":350},
+{"name":"City College Trolley Station", "line":"Blue Line", "latitude":32.715847, "longitude":-117.153997, "radius":250},
+{"name":"Fifth Avenue Trolley Station", "line":"Blue Line", "latitude":32.716749, "longitude":-117.159705, "radius":200},
+{"name":"Civic Center Trolley Station", "line":"Blue Line", "latitude":32.716659, "longitude":-117.16242, "radius":200},
+{"name":"America Plaza Trolley Station", "line":"Blue Line", "latitude":32.717002, "longitude":-117.168416, "radius":300},
+{"name":"8001 Cañada in Tijuana", "line":"Blue Line", "latitude":32.4985913, "longitude":-116.9934406, "radius":700},
+{"name":"Calimax", "line":"Blue Line", "latitude":32.5096663, "longitude":-116.9939556, "radius":700},
+{"name":"Rapidito", "line":"Blue Line", "latitude":32.5221818, "longitude":-117.0097616, "radius":700}
+]
