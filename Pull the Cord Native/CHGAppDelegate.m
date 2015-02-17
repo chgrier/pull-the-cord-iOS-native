@@ -8,20 +8,22 @@
 
 #import "CHGAppDelegate.h"
 #import "CHGMainViewController.h"
+@import CoreLocation;
 
-@interface CHGAppDelegate ()
+@interface CHGAppDelegate () <CLLocationManagerDelegate>
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
 
 @implementation CHGAppDelegate
 
-
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    
+    // region monitoring is shared by all location managers in your application
+    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager.delegate = self;
     
     return YES;
 }
@@ -54,4 +56,21 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+/*
+-(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
+    
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        notification.alertBody = [NSString stringWithFormat:@"Arriving at %@", region.identifier];
+        notification.soundName = @"Default";
+        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+    
+    NSLog(@"App Delegate notification triggered");
+}
+ 
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Notification Received" message:notification.alertBody delegate:nil 	cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alertView show];
+}
+ */
 @end

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
 #import "CHGMainViewController.h"
 
 @interface CHGAppDelegate : UIResponder <UIApplicationDelegate>

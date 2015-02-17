@@ -20,6 +20,7 @@
 		BEBE8D261A7C0B6C00754C2F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBE8D251A7C0B6C00754C2F /* AVFoundation.framework */; };
 		BEC31F781A781A300094DACF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC31F771A781A300094DACF /* MapKit.framework */; };
 		BEC31F7B1A7835DD0094DACF /* CHGStation.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC31F7A1A7835DD0094DACF /* CHGStation.m */; };
+		BEC5B8AF1A82C79C00CCC0AE /* SanYsidro.gpx in Resources */ = {isa = PBXBuildFile; fileRef = BEC5B8AE1A82C79C00CCC0AE /* SanYsidro.gpx */; };
 		BEF47D4F1A784876009DA46B /* sdmts_blueLine.json in Resources */ = {isa = PBXBuildFile; fileRef = BEF47D4E1A784876009DA46B /* sdmts_blueLine.json */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		BEC31F771A781A300094DACF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BEC31F791A7835DD0094DACF /* CHGStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGStation.h; sourceTree = "<group>"; };
 		BEC31F7A1A7835DD0094DACF /* CHGStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGStation.m; sourceTree = "<group>"; };
+		BEC5B8AE1A82C79C00CCC0AE /* SanYsidro.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SanYsidro.gpx; sourceTree = "<group>"; };
 		BEF47D4E1A784876009DA46B /* sdmts_blueLine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = sdmts_blueLine.json; path = ../sdmts_blueLine.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				BE4A5A241A77E3C7008B4DD2 /* CHGAppDelegate.m */,
 				BE4A5A261A77E3C7008B4DD2 /* CHGMainViewController.h */,
 				BE4A5A271A77E3C7008B4DD2 /* CHGMainViewController.m */,
+				BEC5B8AE1A82C79C00CCC0AE /* SanYsidro.gpx */,
 				BEC31F791A7835DD0094DACF /* CHGStation.h */,
 				BEC31F7A1A7835DD0094DACF /* CHGStation.m */,
 				BE4A5A291A77E3C7008B4DD2 /* Main.storyboard */,
@@ -245,6 +248,7 @@
 				BE4A5A301A77E3C7008B4DD2 /* LaunchScreen.xib in Resources */,
 				BEBE8D1E1A7A0AEB00754C2F /* trolleyLogo.jpg in Resources */,
 				BE4A5A2D1A77E3C7008B4DD2 /* Images.xcassets in Resources */,
+				BEC5B8AF1A82C79C00CCC0AE /* SanYsidro.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
