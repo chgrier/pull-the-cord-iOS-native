@@ -22,6 +22,8 @@
 {"name":"Fifth Avenue Trolley Station", "line":"Blue Line", "latitude":32.716749, "longitude":-117.159705, "radius":200},
 {"name":"Civic Center Trolley Station", "line":"Blue Line", "latitude":32.716659, "longitude":-117.16242, "radius":200},
 {"name":"America Plaza Trolley Station", "line":"Blue Line", "latitude":32.717002, "longitude":-117.168416, "radius":300},
+{"name":"Lee's House", "line":"Blue Line", "latitude":32.710699, "longitude":-117.162463, "radius":300},
+{"name":"Ralph's", "line":"Blue Line", "latitude":32.712033, "longitude":-117.163351, "radius":100},
 {"name":"Coronado house", "line":"Blue Line", "latitude":32.693164, "longitude":-117.183343, "radius":50},
 {"name":"Coronado school", "line":"Blue Line", "latitude":32.691910, "longitude":-117.181380, "radius":50}
 ]
