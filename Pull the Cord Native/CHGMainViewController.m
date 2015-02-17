@@ -8,7 +8,7 @@
 
 #import "CHGMainViewController.h"
 @import CoreLocation;
-#import <MapKit/MapKit.h>
+@import MapKit;
 #import "CHGStation.h"
 @import AVFoundation;
 
