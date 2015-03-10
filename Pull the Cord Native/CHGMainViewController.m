@@ -21,14 +21,10 @@ typedef void (^CHGLocationCallback)(CLLocationCoordinate2D);
     CHGLocationCallback _foundLocationCallback;
 }
 
-
 @property (strong, nonatomic) NSMutableArray *stations;
 @property (strong, nonatomic) MKPolyline *mapPolyline;
 @property (strong, nonatomic) MKCircle *stationCircle;
 @property (strong, nonatomic) AVSpeechSynthesizer *speechSynthesizer;
-
-
-
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 //@property (weak, nonatomic) IBOutlet UILabel *stationMessageLabel;
@@ -105,7 +101,6 @@ typedef void (^CHGLocationCallback)(CLLocationCoordinate2D);
     if (status == kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusDenied) {
         NSString *title = (status == kCLAuthorizationStatusDenied) ? @"Location services \nare turned off" : @"Background location is not enabled";
         NSString *message = @"To receive alerts, you must change the Location Services Settings to 'Always'";
-        
         
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
         
@@ -218,8 +213,8 @@ typedef void (^CHGLocationCallback)(CLLocationCoordinate2D);
         
             //view.pinColor = MKPinAnnotationColorRed;
             view.draggable = NO;
-            UIImageView *myCustomImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"trolleyLogo.jpg"]];
-            view.image = [UIImage imageNamed:@"busStop.png"];
+            UIImageView *myCustomImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"trolleyIcon"]];
+            view.image = [UIImage imageNamed:@"trolleyIcon"];
             UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
             // Add a custom image to the left side of the callout.
             
@@ -257,7 +252,7 @@ typedef void (^CHGLocationCallback)(CLLocationCoordinate2D);
         
         UIAlertAction *setAlert = [UIAlertAction actionWithTitle:@"Set Alert" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             
-            [self.locationManager startUpdatingLocation];
+            //[self.locationManager startUpdatingLocation];
             [self selectStationAndZoom:selectedStation];
             [self monitorSelectedStation:selectedStation];
             
@@ -276,43 +271,7 @@ typedef void (^CHGLocationCallback)(CLLocationCoordinate2D);
             popover.permittedArrowDirections = UIPopoverArrowDirectionAny;
         }
         
-        
-        
-    /* create an action sheet
-    UIAlertController *sheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    
-    // add button on action sheet to set alert for selected station
-    [sheet addAction:[UIAlertAction actionWithTitle:[NSString stringWithFormat:@"Set alert for this station"]
-                                              style:UIAlertActionStyleDefault
-                                            handler:^(UIAlertAction *action) {
-                          
-                          [self monitorSelectedStation:selectedStation];
-                          
-                        // remove radius circle if one already exists
-                          if (self.stationCircle) {
-                              [self.mapView removeOverlay:self.stationCircle];
-                              
-                          }
-                          self.stationCircle = [MKCircle circleWithCenterCoordinate:selectedStation.coordinate radius:[selectedStation.radius floatValue]];
-                          self.stationCircle.title = @"%@", [NSString stringWithFormat:@"%@", selectedStation.title];
-                          
-                          [self.mapView addOverlay:self.stationCircle];
-                          
-                          MKCoordinateSpan span = MKCoordinateSpanMake(0.02, 0.02); // one degree of latitude is 69 miles; longitude varies
-                          MKCoordinateRegion regionToDisplay = MKCoordinateRegionMake(self.stationCircle.coordinate, span);
-                          [self.mapView setRegion:regionToDisplay animated:YES];
-                          
-                        }]];
-
-   
-       [sheet addAction:[UIAlertAction actionWithTitle:@"Cancel"
-                                              style:UIAlertActionStyleCancel
-                                            handler:nil]];
-    
-    
-    [self presentViewController:sheet animated:YES completion:nil];
-    */
-}
+    }
 }
 
 -(void)selectStationAndZoom:(CHGStation *)selectedStation {
@@ -331,6 +290,7 @@ typedef void (^CHGLocationCallback)(CLLocationCoordinate2D);
     MKCoordinateSpan span = MKCoordinateSpanMake(0.025, 0.025); // one degree of latitude is 69 miles; longitude varies
     MKCoordinateRegion regionToDisplay = MKCoordinateRegionMake(self.stationCircle.coordinate, span);
     [self.mapView setRegion:regionToDisplay animated:YES];
+    
  
 }
 
@@ -344,8 +304,7 @@ typedef void (^CHGLocationCallback)(CLLocationCoordinate2D);
 #pragma mark - Region Monitoring (Geofencing) Methods
 
 // start monitoring for region
--(void)monitorSelectedStation:(CHGStation *)station
-{
+-(void)monitorSelectedStation:(CHGStation *)station {
 
     for (CLRegion *region in [[self.locationManager monitoredRegions] allObjects]) {
         if (![region.identifier isEqualToString:station.title]) {
@@ -353,32 +312,7 @@ typedef void (^CHGLocationCallback)(CLLocationCoordinate2D);
         }
     }
 
-    NSLog(@"ONE: # of Regions being monitored at beginning of method: %lu", (unsigned long)[self.locationManager monitoredRegions].count);
-    //[self.locationManager startUpdatingLocation];
-    NSLog(@"TWO: # of Regions being monitored after calling stopMonitoringForRegion: %lu", (unsigned long)[self.locationManager monitoredRegions].count);
-    
     [self.locationManager startMonitoringForRegion:[[CLCircularRegion alloc]initWithCenter:station.coordinate radius:[station.radius floatValue] identifier:station.title]];
-    
-    //TODO change radius variable from float to
-    NSLog(@"THREE: # of Regions being monitored after calling startMonitoring: %lu", (unsigned long)[self.locationManager monitoredRegions].count);
-    NSLog(@"STATION being monitored: %@", station.title);
-
-    NSLog(@"REGION being monitored: %@", [self.locationManager monitoredRegions]);
-    
-    // notify user on interface which station is being monitored
-    
-    /*
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert set!"
-                                                    message:[NSString stringWithFormat:@"You will be notified when approaching %@", station.title]
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    
-    [alert show];
-    */
-   
-    //[self showAlertforRegionMonitoring:station];
-   
     
 }
 
@@ -392,13 +326,9 @@ typedef void (^CHGLocationCallback)(CLLocationCoordinate2D);
                                           otherButtonTitles:nil];
     [alert show];
     
-   // [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillResignActiveNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification* notification){
-   //     [alert ];
-    //}];
 }
 
 // delegates for region monitoring
-
 -(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
 {
     
@@ -410,39 +340,13 @@ typedef void (^CHGLocationCallback)(CLLocationCoordinate2D);
     [self.locationManager stopMonitoringForRegion:region];
     [self.locationManager stopUpdatingLocation];
     
-    /*
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Arriving at your station"
-                                                    message:[NSString stringWithFormat:@"You are approaching %@", region.identifier]
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
-
-    
-    NSLog(@"You just entered geofence %@",region.identifier);
-    self.arrivalMessageLabel.text = @"Arriving at:";
-    self.stationMessageLabel.text = [NSString stringWithFormat:@"%@", region.identifier];
-    
-    self.speechSynthesizer = [[AVSpeechSynthesizer alloc]init];
-    static AVSpeechUtterance *utterance;
-    
-    NSString *stationTalk = [NSString stringWithFormat:@"Arriving at: %@.", region.identifier];
-    utterance = [[AVSpeechUtterance alloc]initWithString:stationTalk];
-    utterance.rate = 0.2f;
-    utterance.volume = 1.0f;
-    utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-US"];
-    
-    [self.speechSynthesizer speakUtterance:utterance];
-     */
-
 }
 
 -(void)didEnterRegionAlert:(CLRegion *)region {
     
-    
     UILocalNotification *notification = [[UILocalNotification alloc] init];
     notification.alertBody = [NSString stringWithFormat:@"Arriving at %@", region.identifier];
-    notification.soundName = @"Default";
+    notification.soundName = @"School Bell Ringing.caf";
     [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
     
     
@@ -475,8 +379,6 @@ typedef void (^CHGLocationCallback)(CLLocationCoordinate2D);
     utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-US"];
     
     [self.speechSynthesizer speakUtterance:utterance];
-
-    
     
 }
 
@@ -489,22 +391,6 @@ typedef void (^CHGLocationCallback)(CLLocationCoordinate2D);
 
 -(void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
  
-# warning - May delete all monitored regions
-    // ***check to see if this works - make sure it doesn't clear everything
-   /*
-    if ([self.locationManager monitoredRegions].count > 1) {
-        //[self.locationManager stopMonitoringForRegion:[[[self.locationManager monitoredRegions] allObjects] objectAtIndex:0]];
-        [self.locationManager stopMonitoringForRegion:region];
-        NSLog(@"More than one region detected: Now monitoring for %@", region.identifier);
-    }
-*/
-    
-    /*
-    if ([self.locationManager monitoredRegions]) {
-        [self.locationManager stopMonitoringForRegion:region];
-        NSLog(@"Now monitoring for %@ with radius of %f meters", region.identifier, region.radius);
-    }
-     */
     self.arrivalMessageLabel.text = @"Alert set for:";
     
     [self.stationMessageButton setEnabled:YES];
@@ -513,10 +399,8 @@ typedef void (^CHGLocationCallback)(CLLocationCoordinate2D);
     
     // have to request state if already in region when app starts monitoring
     [self.locationManager requestStateForRegion:region];
-    //[self locationManager:manager didEnterRegion:region];
     NSLog(@"Regions being currently monitored after setting alert: %@", [self.locationManager monitoredRegions]);
 }
-
 
 - (void) locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error
 {
@@ -551,6 +435,8 @@ typedef void (^CHGLocationCallback)(CLLocationCoordinate2D);
                                                    [self.locationManager stopMonitoringForRegion:region];
                                                    [self.locationManager stopUpdatingLocation];
                                                    
+                                                   NSLog(@"Region(s) being currently monitored after PRESSING CLEAR: %@", self.locationManager.monitoredRegions);
+                                                   
                                                    if (self.stationCircle) {
                                                        [self.mapView removeOverlay:self.stationCircle];
                                                    }
@@ -576,9 +462,6 @@ typedef void (^CHGLocationCallback)(CLLocationCoordinate2D);
     
     [self presentViewController:alertController animated:YES completion:nil];
     
-    
-    
-    NSLog(@"Regions being currently monitored after PRESSING CLEAR: %@", [self.locationManager monitoredRegions]);
 }
 
 

@@ -1,9 +1,4 @@
 [
-{"name":"Gran de Oro", "line":"Blue Line", "latitude":32.495991, "longitude":-116.992809, "radius":120},
-{"name":"8001 Cañada in Tijuana", "line":"Blue Line", "latitude":32.4985913, "longitude":-116.9934406, "radius":700},
-{"name":"Calimax", "line":"Blue Line", "latitude":32.5096663, "longitude":-116.9939556, "radius":700},
-{"name":"Rapidito", "line":"Blue Line", "latitude":32.5221818, "longitude":-117.0097616, "radius":700},
-{"name":"Mercado Hildago", "line":"Blue Line", "latitude":32.52761, "longitude":-117.025501, "radius":1000},
 {"name":"San Ysidro Transit Center", "line":"Blue Line", "latitude":32.544787, "longitude":-117.029757, "radius":700},
 {"name":"Beyer Blvd Trolley Station", "line":"Blue Line", "latitude":32.557448, "longitude":-117.047009, "radius":700},
 {"name":"Iris Avenue Trolley Station", "line":"Blue Line", "latitude":32.569312, "longitude":-117.066556, "radius":700},
@@ -22,7 +17,4 @@
 {"name":"Fifth Avenue Trolley Station", "line":"Blue Line", "latitude":32.716749, "longitude":-117.159705, "radius":200},
 {"name":"Civic Center Trolley Station", "line":"Blue Line", "latitude":32.716659, "longitude":-117.16242, "radius":200},
 {"name":"America Plaza Trolley Station", "line":"Blue Line", "latitude":32.717002, "longitude":-117.168416, "radius":300},
-{"name":"Lee's House", "line":"Blue Line", "latitude":32.710699, "longitude":-117.162463, "radius":300},
-{"name":"Ralph's", "line":"Blue Line", "latitude":32.712033, "longitude":-117.163351, "radius":100},
-{"name":"Coronado house", "line":"Blue Line", "latitude":32.693164, "longitude":-117.183343, "radius":50}
 ]

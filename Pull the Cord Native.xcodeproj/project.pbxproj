@@ -15,6 +15,7 @@
 		BE4A5A301A77E3C7008B4DD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE4A5A2E1A77E3C7008B4DD2 /* LaunchScreen.xib */; };
 		BE4A5A3C1A77E3C7008B4DD2 /* Pull_the_Cord_NativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4A5A3B1A77E3C7008B4DD2 /* Pull_the_Cord_NativeTests.m */; };
 		BE4A5A461A77E420008B4DD2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4A5A451A77E420008B4DD2 /* CoreLocation.framework */; };
+		BE5E89351A9401880080DB1E /* School Bell Ringing.caf in Resources */ = {isa = PBXBuildFile; fileRef = BE5E89341A9401880080DB1E /* School Bell Ringing.caf */; };
 		BEBE8D1E1A7A0AEB00754C2F /* trolleyLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEBE8D1D1A7A0AEB00754C2F /* trolleyLogo.jpg */; };
 		BEBE8D241A7A8D5100754C2F /* busStop.png in Resources */ = {isa = PBXBuildFile; fileRef = BEBE8D231A7A8D5100754C2F /* busStop.png */; };
 		BEBE8D261A7C0B6C00754C2F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBE8D251A7C0B6C00754C2F /* AVFoundation.framework */; };
@@ -48,6 +49,7 @@
 		BE4A5A3A1A77E3C7008B4DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE4A5A3B1A77E3C7008B4DD2 /* Pull_the_Cord_NativeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pull_the_Cord_NativeTests.m; sourceTree = "<group>"; };
 		BE4A5A451A77E420008B4DD2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BE5E89341A9401880080DB1E /* School Bell Ringing.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "School Bell Ringing.caf"; sourceTree = "<group>"; };
 		BEBE8D1D1A7A0AEB00754C2F /* trolleyLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trolleyLogo.jpg; sourceTree = "<group>"; };
 		BEBE8D231A7A8D5100754C2F /* busStop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = busStop.png; path = ../../busStop.png; sourceTree = "<group>"; };
 		BEBE8D251A7C0B6C00754C2F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -106,7 +108,6 @@
 				BEC31F791A7835DD0094DACF /* CHGStation.h */,
 				BEC31F7A1A7835DD0094DACF /* CHGStation.m */,
 				BE4A5A291A77E3C7008B4DD2 /* Main.storyboard */,
-				BEBE8D231A7A8D5100754C2F /* busStop.png */,
 				BE4A5A2C1A77E3C7008B4DD2 /* Images.xcassets */,
 				BEF47D4E1A784876009DA46B /* sdmts_blueLine.json */,
 				BE4A5A2E1A77E3C7008B4DD2 /* LaunchScreen.xib */,
@@ -119,6 +120,8 @@
 		BE4A5A1F1A77E3C7008B4DD2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BEBE8D231A7A8D5100754C2F /* busStop.png */,
+				BE5E89341A9401880080DB1E /* School Bell Ringing.caf */,
 				BEBE8D1D1A7A0AEB00754C2F /* trolleyLogo.jpg */,
 				BE4A5A201A77E3C7008B4DD2 /* Info.plist */,
 				BE4A5A211A77E3C7008B4DD2 /* main.m */,
@@ -245,6 +248,7 @@
 				BE4A5A301A77E3C7008B4DD2 /* LaunchScreen.xib in Resources */,
 				BEBE8D1E1A7A0AEB00754C2F /* trolleyLogo.jpg in Resources */,
 				BE4A5A2D1A77E3C7008B4DD2 /* Images.xcassets in Resources */,
+				BE5E89351A9401880080DB1E /* School Bell Ringing.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
