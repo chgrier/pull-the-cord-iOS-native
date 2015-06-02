@@ -21,6 +21,9 @@ To add your own JSON file to create your own geofences, use the following JSON f
 - UILocalNotification provides nofications when app is running in the background.
 - NSJSONSerialization to convert JSON-formatted station to Foundation objects for mapping.
 
-<img src="www.charlesgrier.com/screen_shots/Pull-the-Cord-iPhone6_400x600.png" alt="Pull the Cord! for iPhone 6" height="200" width="400">
+
+<img src="http://www.charlesgrier.com/screen_shots/Pull_the_Cord_screenShot.png" height="400" width="225">
+<img src="http://www.charlesgrier.com/screen_shots/Pull-the-Cord-iPhone6_400x600.png" height="400" width="200">
+
 
  
