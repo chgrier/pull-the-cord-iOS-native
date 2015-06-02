@@ -1,4 +1,5 @@
-# Pull the Cord! - Transit Alerts using iOS CoreLocation
+# Pull the Cord!
+###Transit Alerts using iOS CoreLocation
 
 ######Description:
 An iOS app that uses geofencing to alert the user when their selected transit stop is approaching.
@@ -11,7 +12,12 @@ To add your own JSON file to create your own geofences, used the following JSON 
 ```
 
 ######Features: 
-- CoreLocation to trigger alerts when entering a user-specified region
-- 
+- CoreLocation to trigger alerts when entering a user-specified region.
+- MapKit for mapping routes and stations.
+    - MKOverlayRenderer
+    
+- AVFoundation to create audible alerts.
+- UILocalNotification provides nofications when app is running in the background
+
 
  
